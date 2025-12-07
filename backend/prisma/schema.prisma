@@ -1,0 +1,61 @@
+// prisma/schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("DATABASE_URL")
+}
+
+model Vendor {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String
+  category  String?   // e.g. "hardware supplier"
+  createdAt DateTime  @default(now())
+
+  proposals Proposal[]
+}
+
+model Rfp {
+  id                  Int        @id @default(autoincrement())
+  title               String
+  description         String      // raw natural language input from user
+  budget              Float?
+  deliveryTimelineDays Int?
+  paymentTerms        String?
+  warrantyMonths      Int?
+  status              RfpStatus   @default(DRAFT)
+  createdAt           DateTime    @default(now())
+
+  proposals Proposal[]
+}
+
+model Proposal {
+  id               Int       @id @default(autoincrement())
+  rfpId            Int
+  vendorId         Int
+  rawEmailContent  String
+  totalPrice       Float?
+  deliveryDays     Int?
+  paymentTerms     String?
+  warrantyMonths   Int?
+  notes            String?     // parsed extra terms, conditions
+  aiScore          Float?      // AI-evaluated score
+  aiJustification  String?     // Why this score?
+  createdAt        DateTime    @default(now())
+
+  rfp    Rfp    @relation(fields: [rfpId], references: [id])
+  vendor Vendor @relation(fields: [vendorId], references: [id])
+
+  @@unique([rfpId, vendorId]) // one proposal per vendor per RFP (assumption)
+}
+
+enum RfpStatus {
+  DRAFT
+  SENT
+  EVALUATING
+  COMPLETED
+}
