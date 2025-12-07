@@ -1,5 +1,8 @@
 # 🧠 AI-Powered RFP Management System
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfccfc0eaf44151e220e2c3026c9c33a2082e342
 ### Aerchain Technical Assessment
 
 This project implements an **end-to-end AI-powered RFP (Request for Proposal) management system** used by a procurement manager to streamline vendor selection.
@@ -10,6 +13,7 @@ The system transforms natural-language procurement needs into structured RFPs, s
 ## 🚀 Features
 
 ### ✔ AI-Powered RFP Creation
+<<<<<<< HEAD
 
 Enter plain English like:
 
@@ -22,14 +26,28 @@ Create and list vendors (name, email, category).
 
 ### ✔ Real Email Integration (Gmail SMTP + IMAP)
 
+=======
+Enter plain English like:  
+> "We need 20 laptops, budget $50k, delivery 30 days…"  
+AI converts this into a structured RFP with fields such as budget, delivery timeline, payment terms, warranty, and title.
+
+### ✔ Vendor Management
+Create and list vendors (name, email, category).
+
+### ✔ Real Email Integration (Gmail SMTP + IMAP)
+>>>>>>> cfccfc0eaf44151e220e2c3026c9c33a2082e342
 - Send RFPs via **Gmail SMTP**
 - Receive vendor replies using **Gmail IMAP**
 - Subject line embeds IDs so replies automatically map back to the correct Vendor & RFP
 
 ### ✔ AI Proposal Extraction
+<<<<<<< HEAD
 
 Vendor replies are unstructured. AI extracts:
 
+=======
+Vendor replies are unstructured. AI extracts:
+>>>>>>> cfccfc0eaf44151e220e2c3026c9c33a2082e342
 - Total Price
 - Delivery Days
 - Payment Terms
@@ -37,11 +55,17 @@ Vendor replies are unstructured. AI extracts:
 - Notes
 
 ### ✔ AI Proposal Comparison
+<<<<<<< HEAD
 
 AI ranks proposals and recommends the best vendor with scores + reasoning.
 
 ### ✔ Modern Web Interface
 
+=======
+AI ranks proposals and recommends the best vendor with scores + reasoning.
+
+### ✔ Modern Web Interface
+>>>>>>> cfccfc0eaf44151e220e2c3026c9c33a2082e342
 React frontend for RFP creation, vendor management, sending emails, viewing proposals, and running comparisons.
 
 ---
@@ -100,7 +124,10 @@ project/
 ## ⚙️ Tech Stack
 
 ### **Backend**
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfccfc0eaf44151e220e2c3026c9c33a2082e342
 - Node.js + Express
 - Prisma ORM
 - PostgreSQL
@@ -109,7 +136,10 @@ project/
 - OpenAI API
 
 ### **Frontend**
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfccfc0eaf44151e220e2c3026c9c33a2082e342
 - React + Vite
 - TypeScript
 - Axios
@@ -190,12 +220,21 @@ Frontend runs at **http://localhost:5173**
 
 ## 📝 Demo Script
 
+<<<<<<< HEAD
 1. Add vendors
 2. Create AI-powered RFP
 3. Send RFP emails
 4. Vendor replies in Gmail
 5. Process replies via IMAP
 6. Run AI comparison
+=======
+1. Add vendors  
+2. Create AI-powered RFP  
+3. Send RFP emails  
+4. Vendor replies in Gmail  
+5. Process replies via IMAP  
+6. Run AI comparison  
+>>>>>>> cfccfc0eaf44151e220e2c3026c9c33a2082e342
 
 ---
 
@@ -211,7 +250,10 @@ Frontend runs at **http://localhost:5173**
 ## ✔ Requirements Mapping
 
 All required features implemented:
+<<<<<<< HEAD
 
+=======
+>>>>>>> cfccfc0eaf44151e220e2c3026c9c33a2082e342
 - RFP creation (AI)
 - Vendor management
 - Email send + receive
