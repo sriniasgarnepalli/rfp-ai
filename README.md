@@ -1,5 +1,5 @@
 # 🧠 AI-Powered RFP Management System
-### Aerchain Technical Assessment
+
 
 This project implements an **end-to-end AI-powered RFP (Request for Proposal) management system** used by a procurement manager to streamline vendor selection.
 The system transforms natural-language procurement needs into structured RFPs, sends them to vendors via real email, receives vendor responses from Gmail, extracts structured proposal data using AI, and provides AI-based vendor comparison & recommendations.
